@@ -1,51 +1,73 @@
-<html>
-	<title> Kevin Ros </title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Ros - PhD Candidate</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Inline Navigation Bar with Name -->
+    <nav>
+        <h1>Kevin Ros</h1>
+        <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="index.html#research">Research</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://linkedin.com/in/kevin-ros-92bba6126">LinkedIn</a></li>
+            <li><a href="https://scholar.google.com/citations?user=0HCtLPYAAAAJ&hl=en&oi=ao">Google Scholar</a></li>
+            <li><a href="cv.pdf">CV</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Redesigned hero section -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="headshot.jpg" alt="Kevin Ros">
+        </div>
+        <div class="hero-content">
+            <h2 class="hero-title">Computer Science PhD Candidate</h2>
+            <p class="hero-subtitle">I am a Ph.D Candidate at The University of Illinois Urbana-Champaign</p>
+            <p class="hero-text">
+                I study information retrieval under <a href="http://czhai.cs.illinois.edu/">ChengXiang Zhai</a> as part of the <a href="https://timan.cs.illinois.edu/ir/index.html">TIMAN Group</a>. I am expecting to graduate in the summer of 2025.
+            </p>
+			<p class="hero-text">
+                My main research goal is to predict when people need information, and then to proactively resolve their needs with minimal user effort.
+            </p>
+            <p class="contact-info">
+                To contact me, please reach out at <a href="mailto:kjros2@illinois.edu" class="email">kjros2@illinois.edu</a>
+            </p>
+        </div>
+    </section>
+    
+    <div id="about" class="section">
+        <h2>About</h2>
+        <p>I am a fifth-year computer science Ph.D. candidate studying information retrieval under <a href="http://czhai.cs.illinois.edu/">ChengXiang Zhai</a> as part of the <a href="https://timan.cs.illinois.edu/ir/index.html">TIMAN Group</a> at <a href="https://cs.illinois.edu/">The University of Illinois at Urbana-Champaign</a>.</p>
+        <p>Prior to this, I graduated from <a href="https://www.vassar.edu/">Vassar College</a> in 2020 with a B.A. in Computer Science and a B.A. in Mathematics.</p>
+		<p>Outside of academia, I enjoy playing <a href="https://www.vassarathletics.com/sports/mens-volleyball/roster/kevin-ros/8392">volleyball</a>.</p>
+    </div>
+    
+    <div id="research" class="section">
+        <h2>Research</h2>
+        <p>If you're like me, you're tired of constantly having to manually search for things. This is especially frustrating in settings where the search is redundant with respect to the context. For example,</p>
 
-	<body>
-	  <h2>Kevin Ros</h2>
-	  <img src="headshot.jpg" alt="A photograph of Kevin Ros" width="200" height="300">
-	  <br>
+		<ol>
+            <li>During a meeting, someone references a document. Then someone in the meeting needs to manually search to pull up this document and share it with everyone</li>
+            <li>While reading a book, you come across a word you don't know. So you need to open your browser and search to define the word.</li>
+			<li>During a class, the professor mentions a concept that's a bit confusing. So you try to find some online diagram that explains the concept</li>
+			<li>In a conference presentation, the presenter mentions a related work that in unfamiliar to you. So you pull up the paper being presented, find the title, search for it online, and then skim the discovered paper. </li>
 
-	  Ph.D candidate, The University of Illinois at Urbana-Champaign<br>
-	  kjros2@illinois.edu 
+        </ol>
 
+		<p>I'd like to create a world where this information is provided automatically, so that you don't need to spend the time looking for it yourself. Towards this goal, we've built <a href="https://www.instinfo.com/">instinfo</a>, as the first step towards practically addressing these challenges.</p>
 
-
-		<p>
-			<b>About Me</b><br>
-			I am a third-year computer science Ph.D. candidate studying information retrieval, natural language generation, and machine learning<br>
-			under <a href="http://czhai.cs.illinois.edu/">ChengXiang Zhai</a> as part of the <a href="https://timan.cs.illinois.edu/ir/index.html">TIMAN Group</a> at <a href="https://cs.illinois.edu/">The University of Illinois at Urbana-Champaign.</a><br>
-			Prior to this, I graduated from <a href="http://www.vassar.edu/">Vassar College</a> in 2020 with a B.A. in Computer Science and a B.A. in Mathematics. <br>
-		</p>
-
-		<p>
-			<b>Research Interests</b><br>
-			Information retrieval, text retrieval, artificial intelligence, and natural language understanding.
-		</p>
-		<p> <b>Helpful Links</b> </p>
-		<ul>
-			<li><a href="https://kevinros.github.io/cv.pdf">CV</a></li>
-			<li><a href="https://linkedin.com/in/kevin-ros-92bba6126">LinkedIn</a></li>
-			<li><a href="https://scholar.google.com/citations?user=0HCtLPYAAAAJ&hl=en&oi=ao">Google Scholar</a></li>
-			<!--<li><a href="https://kevinros.github.io/publications">Publications</a></li>-->
-
-		</ul>
-		<p>
-			<b>Outside academia, I enjoy</b>
-			<ul>
-			<li>Volleyball / Beach Volleyball </li>
-			<li> Astronomy </li>
-			<ul>
-		</p>
-		<div>
-		
-		</div>
+		<p>Concretely, this research leverages state-of-the-art language models, machine learning, data collection, benchmark and dataset creation, and user studies.</p>
 
 
-
-	
-	</body>
-
-
-
+    </div>
+    
+    <footer>
+        © 2025 Kevin Ros
+    </footer>
+</body>
 </html>

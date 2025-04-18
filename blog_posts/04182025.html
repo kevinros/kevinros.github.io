@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Kevin Ros</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Inline Navigation Bar with Name -->
+    <nav>
+        <h1>Kevin Ros</h1>
+        <ul>
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../index.html#research">Research</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="https://linkedin.com/in/kevin-ros-92bba6126">LinkedIn</a></li>
+            <li><a href="https://scholar.google.com/citations?user=0HCtLPYAAAAJ&hl=en&oi=ao">Google Scholar</a></li>
+            <li><a href="../cv.pdf">CV</a></li>
+        </ul>
+    </nav>
+    
+    <div class="blog-post">
+        <h3 class="blog-title">On the Importance of Benchmarking in AI</h3>
+        <span class="blog-date">April 18, 2025 - Written for <a href="https://medium.com/@KiteAI/the-importance-of-benchmarking-in-ai-df71d9435ea2">Kite AI</a></span>
+
+		<p></p>
+
+		<p>“Tell me how you measure me and I will tell you how I behave”  -Eli Goldratt</p>
+
+
+		<p>If there is one takeaway from the generative AI era, it may be that model naming is a harder problem than model engineering. From Geminis to DeepSeeks, from chats to thinkings, and from previews to minis to experimentals, AI engineers must be quite glad that <a href="https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument">Cantor’s diagonal argument</a> holds for numbers between 1 and 3. It is therefore no surprise that the people responsible for implementing these models <a href="https://www.linkedin.com/pulse/thing-too-many-ai-models-lets-talk-mohamed-zakeer-ozxic/">constantly</a> <a href="https://techcrunch.com/2024/04/19/too-many-models/">complain</a> <a href="https://www.makeuseof.com/simplifying-ai-model-names/">about</a> the difficulties of keeping track of the best-performing models.</p>
+
+		<p>Recently, I came across <a href="https://docs.google.com/spreadsheets/d/1foc98Jtbi0-GUsNySddvL0b2a7EuVQw8MoaQlWaDT-w/edit?gid=1516281503#gid=1516281503">this awesome spreadsheet</a>, created by <a href="https://www.harlanlewis.com/">Harlan Lewis</a>, that covers, in detail, the performances of many of the top generative AI models, and how the performance has shifted over time. I appreciate resources like this because they are simple to understand and provide a great starting point for knowing the benchmarked performances of the models. 
+		</p>
+
+		<p>But, as I was reaching through this spreadsheet, I couldn't help but wonder about the broader implications of model benchmarking as we move towards agentic solutions and the barriers that we are running into along the way.
+		</p>
+
+		<p>Put simply, the definition of a benchmark is a standard point of reference against which things may be compared. In technical terms, this is where researchers share a dataset with a defined metric, and various models are evaluated on the dataset according to this metric. The fundamental assumption here is that higher metric performance means better models.</p>
+
+		<p>And benchmarking is important because benchmarks tell us two things:</p>
+
+		<ol>
+            <li>What models are best for downstream applications, and</li>
+            <li>The direction along which to improve the models (i.e., higher performances)</li>
+		</ol>
+
+		<p>
+			The latter point has been the crux of machine learning, or more generally, predictive modeling, as argued by <a href="https://en.wikipedia.org/wiki/David_Donoho">David Donoho</a> in his article titled “<a href="https://www.tandfonline.com/doi/full/10.1080/10618600.2017.1384734">50 Years of Data Science</a>”. This is because of something called the Common Task Framework, which Donoho outlines as follows:
+		</p>
+
+		<ol>
+            <li>A publicly available training dataset involving, for each observation, a list of (possibly many) feature measurements, and a class label for that observation.</li>
+            <li>A set of enrolled competitors whose common task is to infer a class prediction rule from the training data.</li>
+			<li>A scoring referee, to which competitors can submit their prediction rule. The referee runs the prediction rule against a testing dataset, which is sequestered behind a Chinese wall. The referee objectively and automatically reports the score (prediction accuracy) achieved by the submitted rule.</li>
+		</ol>
+
+		<p>
+			As you can see, the Common Task Framework is a formalization of a benchmark discussed above, with a few added aspects to prevent cheating. Donohoe then goes on to state, in my opinion, a crucial observation: “those fields where machine learning has scored successes are essentially those fields where CTF [the Common Task Framework] has been applied systematically.”
+		</p>
+
+		<p>
+			And systematically has it been applied - from quintessential examples like <a href="https://www.kaggle.com/competitions">Kaggle</a> and <a href="https://paperswithcode.com/sota">Papers with Code</a> to individual tasks like language translation, voice recognition, and image classification, it is not hard to see how influential the Common Task Framework has been over the last decade. And intuitively, it seems that the Common Task Framework has worked well for problems that can be modeled in this framework - ones that are unambiguous, have clear metric(s) of success, and have well-defined scopes of data.  
+		</p>
+		
+		<p>
+			But what happens when problems cannot be modeled by the Common Task Framework? 
+		</p>
+
+		<p>
+			Many believe that one such problem is artificial general intelligence. As argued by Raji et al. in the paper titled “<a href="https://arxiv.org/pdf/2111.15366">AI and the Everything in The Whole Wide World Benchmark</a>”, the issue is that, by definition, benchmarks restrict the scope of what can be claimed, which directly contrasts with the “general” goal of artificial general intelligence. Put simply, a model performing well on a benchmark strictly means that the model performed well on a benchmark, and we should be cautious to make any claims about its generality or applicability in settings outside of the benchmark. 
+		</p>
+
+		<p>
+			To see why this might be the case, consider any subjective task you do in your day-to-day life and think about what it would mean to design a Common Task Framework benchmark for it. What metric do you select? How do you measure this metric? What is the scope of data? As soon as you define the benchmark, I’m sure that you could think of cases that contradict the data set scope or defined metric measurement. And this doesn’t even begin to address the recent challenges of benchmarking in a world where the <a href="https://arxiv.org/html/2406.04244v1">training data might</a> already <a href="https://techcrunch.com/2025/01/19/ai-benchmarking-organization-criticized-for-waiting-to-disclose-funding-from-openai/">include the benchmark</a>. 
+		</p>
+
+		<p>
+			What does all of this mean? Well, either
+		</p>
+
+
+		<ol>
+            <li>The Common Task Framework is sufficient for artificial general intelligence, but we haven’t constructed the correct benchmark yet for it, or </li>
+            <li>The Common Task Framework is insufficient for artificial general intelligence, and we will need some paradigm shift to achieve it (assuming Donohoe’s argument holds).</li>
+		</ol>
+
+		<p>I don’t think that anyone knows the answer to this yet, and how this plays out remains to be seen. But in the short term, one thing is clear - data access is critical as long as the Common Task Framework remains the dominant approach.</p>
+       
+    </div>
+    
+    <footer>
+        © 2025 Kevin Ros
+    </footer>
+</body>
+</html>
